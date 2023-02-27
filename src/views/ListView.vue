@@ -4,17 +4,17 @@
 
     <div class="wrapper">
         <div class="container">
-            <ListHeader title="Ideas" color="#BDBDBD" />
+            <ListHeader title="Ideas" backgroundColor="#BDBDBD" />
             <IdeaList class="list" />
         </div>
         
         <div class="container">
-            <ListHeader title="Working on" color="#4778EC" />
+            <ListHeader title="Working on" backgroundColor="#4778EC" />
             <WorkingOnList class="list"/>
         </div>
         
         <div class="container">
-            <ListHeader title="Completed" color="#5BBC50" />
+            <ListHeader title="Completed" backgroundColor="#5BBC50" />
             <CompletedList class="list"/>
         </div>
 
@@ -53,19 +53,10 @@ export default {
         grid-column-gap: 3rem;
         width: 301.5px;
     }
+}
 
-    .container {
-        left: auto;
-        right: auto;
-    }
-
-    .global-input {
-        max-width: 315px !important;
-    }
-
-    .idea-wrapper {
-        max-width: 315px !important;
-    }
+span {
+    cursor: pointer;
 }
 
 hr {
@@ -76,6 +67,10 @@ div {
     overflow-wrap: break-word;
 }
 
+.list {
+    position: relative;
+    top: 30.2px;
+}
 .container {
     position: relative;
     top: 55px;
@@ -111,6 +106,7 @@ div {
     padding-left: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-family: 'Radio Canada', sans-serif;
     font-size: 15px;
 }
 
@@ -118,19 +114,10 @@ div {
     outline: none;
 }
 
-.global-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .global-p {
-    position: relative;
-    text-align: left;
     left: 5px;
     color: black;
-    padding-bottom: 15px;
-    inline-size: 90%; 
+    padding-bottom: 10px;
 }
 
 .idea-wrapper {

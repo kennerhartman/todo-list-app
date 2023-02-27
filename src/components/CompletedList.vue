@@ -4,7 +4,7 @@
             type="text"
             placeholder="Enter an item..."
             @keydown="addItem"
-            class="global-center global-input"
+            class="global-input"
         />
 
         <hr>
@@ -61,10 +61,3 @@
   }
 
 </script>
-
-<style>
-span {
-    cursor: pointer;
-}
-
-</style>
