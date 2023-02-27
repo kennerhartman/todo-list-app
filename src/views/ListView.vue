@@ -4,17 +4,17 @@
 
     <div class="wrapper">
         <div class="container">
-            <ListHeader title="Ideas" />
+            <ListHeader title="Ideas" color="#BDBDBD" />
             <IdeaList class="list" />
         </div>
         
         <div class="container">
-            <ListHeader title="Working on" />
+            <ListHeader title="Working on" color="#4778EC" />
             <WorkingOnList class="list"/>
         </div>
         
         <div class="container">
-            <ListHeader title="Completed" />
+            <ListHeader title="Completed" color="#5BBC50" />
             <CompletedList class="list"/>
         </div>
 

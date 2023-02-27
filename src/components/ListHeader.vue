@@ -10,8 +10,9 @@
 export default {
   name: 'ListCard',
   props: { 
-    title: String
-  }
+    title: String,
+    color: String
+  },
 }
 </script>
 
@@ -23,7 +24,7 @@ export default {
   padding-top: 5px;
   height: 50px;
   width: 300px;
-  background-color: rgb(175, 175, 175);
+  background: v-bind(color);
 }
 
 </style>
