@@ -14,7 +14,10 @@
             v-for='(workingOnItem, index) in workingOnItems'
             :key='workingOnItem'
         >
-            <p class="global-p"><span @click="removeItem(index)">x</span> {{ workingOnItem }} </p>
+            <p class="global-p">
+                <span @click="removeItem(index)"><img src="@/assets/trash-icon.png" class="trash-icon"></span>
+                {{ workingOnItem }} 
+            </p>
         </div>
     </div>
 </template>

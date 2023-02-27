@@ -13,7 +13,10 @@
             v-for='(completedItem, index) in completedItems'
             :key='completedItem'
             >
-            <p class="global-p card"><span @click="removeItem(index)">x</span> {{ completedItem }} </p>
+            <p class="global-p card">
+                <span @click="removeItem(index)"><img src="@/assets/trash-icon.png" class="trash-icon"></span>
+                {{ completedItem }} 
+            </p>
         </div>
     </div>
 </template>
@@ -60,11 +63,6 @@
 </script>
 
 <style>
-.idea-wrapper {
-    background: white;
-    width: 101.2%;
-}
-
 span {
     cursor: pointer;
 }

@@ -3,22 +3,23 @@
     <router-link to="/">Home</router-link>
 
     <div class="wrapper">
-
-        
-
-        <div>
+        <div class="container">
             <ListHeader title="Ideas" />
             <IdeaList class="list" />
         </div>
         
-        <div>
+        <div class="container">
             <ListHeader title="Working on" />
             <WorkingOnList class="list"/>
         </div>
         
-        <div>
+        <div class="container">
             <ListHeader title="Completed" />
             <CompletedList class="list"/>
+        </div>
+
+        <div>
+            <p>&nbsp;</p>
         </div>
     </div>
 
@@ -44,6 +45,29 @@ export default {
 </script>
 
 <style>
+@media only screen and (max-width: 1020px) {
+    .wrapper {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-gap: 100px !important;
+        grid-column-gap: 3rem;
+        width: 301.5px;
+    }
+
+    .container {
+        left: auto;
+        right: auto;
+    }
+
+    .global-input {
+        max-width: 315px !important;
+    }
+
+    .idea-wrapper {
+        max-width: 315px !important;
+    }
+}
+
 hr {
     border: solid 1px rgb(209, 209, 209);
 }
@@ -52,16 +76,29 @@ div {
     overflow-wrap: break-word;
 }
 
-.list {
+.container {
     position: relative;
     top: 55px;
+}
+
+.trash-icon {
+    position:relative;
+    bottom: 1px;
+    left: 20px;
+    height: 20px;
+    float: right;
+    cursor: pointer;
+}
+
+.trash-icon:hover {
+    opacity: 0.5;
+    cursor: pointer;
 }
 
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 3rem;
-    width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -90,9 +127,14 @@ div {
 .global-p {
     position: relative;
     text-align: left;
-    left: 25px;
+    left: 5px;
     color: black;
     padding-bottom: 15px;
     inline-size: 90%; 
+}
+
+.idea-wrapper {
+    background: white;
+    width: 101.2%;
 }
 </style>

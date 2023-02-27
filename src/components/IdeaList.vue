@@ -13,7 +13,11 @@
             v-for='(ideaItem, index) in ideaItems'
             :key='ideaItem'
             >
-            <p class="global-p card"><span @click="removeItem(index)">x</span> {{ ideaItem }} </p>
+            <p class="global-p card">
+                <span @click="removeItem(index)"><img src="@/assets/trash-icon.png" class="trash-icon"></span> 
+                {{ ideaItem }} 
+            </p>
+            
         </div>
     </div>
 </template>
@@ -23,7 +27,9 @@
         name: 'UserInput',
         props: [],
         data () {
+            
             return {
+                deleteIcon: '@/assets/trash-icon.png',    
                 ideaItems: [],
                 ideaItem: ""
             }
@@ -60,11 +66,6 @@
 </script>
 
 <style>
-.idea-wrapper {
-    background: white;
-    width: 101.2%;
-}
-
 span {
     cursor: pointer;
 }
