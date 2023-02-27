@@ -48,6 +48,10 @@ hr {
     border: solid 1px rgb(209, 209, 209);
 }
 
+div {
+    overflow-wrap: break-word;
+}
+
 .list {
     position: relative;
     top: 55px;
@@ -89,5 +93,6 @@ hr {
     left: 25px;
     color: black;
     padding-bottom: 15px;
+    inline-size: 90%; 
 }
 </style>
