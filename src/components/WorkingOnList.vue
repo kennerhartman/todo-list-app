@@ -1,18 +1,20 @@
 <template>
-    <div>
+    <div class="idea-wrapper">
 
         <input 
             type="text"
             placeholder="Enter an item..."
             @keydown="addItem"
-            class="center"
+            class="global-center global-input"
         />
 
+        <hr>
+
         <div 
-            v-for='(item, index) in items'
-            :key='item'
+            v-for='(workingOnItem, index) in workingOnItems'
+            :key='workingOnItem'
         >
-            <p><span @click="removeItem(index)">x</span> {{ item }} </p>
+            <p class="global-p"><span @click="removeItem(index)">x</span> {{ workingOnItem }} </p>
         </div>
     </div>
 </template>
@@ -20,10 +22,11 @@
 <script>
     export default {
         name: 'UserInput',
+        props: [],
         data () {
             return {
-                items: [],
-                item: ""
+                workingOnItems: [],
+                workingOnItem: ""
             }
         },
         methods: {
@@ -33,24 +36,24 @@
                     var val = event.target.value.trim()
                     
                     if (val.length > 0) {
-                        this.items.push(val)
+                        this.workingOnItems.push(val)
                         event.target.value = ""
 
-                        localStorage.setItem("items", JSON.stringify(this.items));
+                        localStorage.setItem("workingOnItems", JSON.stringify(this.workingOnItems));
                     }
                 }
             },
             removeItem(index) {
-                this.items.splice(index, 1)
+                this.workingOnItems.splice(index, 1)
 
-                var storedItems = JSON.parse(localStorage.getItem("items"))
+                var storedItems = JSON.parse(localStorage.getItem("workingOnItems"))
                 storedItems.splice(index, 1)
-                localStorage.setItem("items", JSON.stringify(storedItems))
+                localStorage.setItem("workingOnItems", JSON.stringify(storedItems))
             },
         },
         mounted() {
-            if (localStorage.items) {
-                this.items = JSON.parse(localStorage.getItem("items"));
+            if (localStorage.workingOnItems) {
+                this.workingOnItems = JSON.parse(localStorage.getItem("workingOnItems"));
             }
         }
   }
@@ -58,21 +61,11 @@
 </script>
 
 <style>
-.center {
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: calc(99.6%);
-}
+
 
 span {
     cursor: pointer;
 }
 
-input {
-    position: relative;
-    float: center;
-    margin: auto;
-    right: 5px;
-}
+
 </style>
