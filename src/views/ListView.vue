@@ -5,21 +5,10 @@
     <div class="wrapper">
         <div class="container">
             <ListHeader title="Ideas" backgroundColor="#BDBDBD" />
-            <IdeaList class="list" />
-        </div>
-        
-        <div class="container">
-            <ListHeader title="Working on" backgroundColor="#4778EC" />
-            <WorkingOnList class="list"/>
-        </div>
-        
-        <div class="container">
-            <ListHeader title="Completed" backgroundColor="#5BBC50" />
-            <CompletedList class="list"/>
-        </div>
+                       
+            <IdeaList class="list"/>
 
-        <div>
-            <p>&nbsp;</p>
+            
         </div>
     </div>
 
@@ -28,16 +17,11 @@
 <script>
 import ListHeader from '@/components/ListHeader.vue'
 import IdeaList from '@/components/IdeaList.vue'
-import WorkingOnList from '@/components/WorkingOnList.vue'
-import CompletedList from '@/components/CompletedList.vue'
-
 
 export default {
     components: {
         ListHeader,
-        WorkingOnList,
         IdeaList,
-        CompletedList
     },
     props: [],
     methods: { }
