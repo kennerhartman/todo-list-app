@@ -17,6 +17,7 @@
             <p class="global-p">
                 <span @click="removeItem(index)"><img src="@/assets/trash-icon.png" class="trash-icon"></span>
                 {{ workingOnItem }} 
+                <span class="drop">.</span>
             </p>
         </div>
     </div>

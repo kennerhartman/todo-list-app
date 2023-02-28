@@ -55,8 +55,14 @@ export default {
     }
 }
 
-span {
-    cursor: pointer;
+.drop {
+    width: 111.1%;
+    position: relative;
+    float: left;
+    top: -0.49px;
+    right: 5px;
+    background: white;
+    color: white;
 }
 
 hr {
@@ -117,7 +123,9 @@ div {
 .global-p {
     left: 5px;
     color: black;
-    padding-bottom: 10px;
+    padding-bottom: 0.1px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .idea-wrapper {

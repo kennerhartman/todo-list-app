@@ -12,13 +12,15 @@
         <div 
             v-for='(ideaItem, index) in ideaItems'
             :key='ideaItem'
-            >
+            > 
             <p class="global-p card">
                 <span @click="removeItem(index)"><img src="@/assets/trash-icon.png" class="trash-icon"></span> 
                 {{ ideaItem }} 
+                <span class="drop">.</span>
             </p>
             
         </div>
+        
     </div>
 </template>
 

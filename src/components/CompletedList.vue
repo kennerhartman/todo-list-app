@@ -16,6 +16,7 @@
             <p class="global-p card">
                 <span @click="removeItem(index)"><img src="@/assets/trash-icon.png" class="trash-icon"></span>
                 {{ completedItem }} 
+                <span class="drop">.</span>
             </p>
         </div>
     </div>
